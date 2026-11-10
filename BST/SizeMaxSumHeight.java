@@ -34,9 +34,25 @@ public class SizeMaxSumHeight {
     public static int sum(Node root) {
         if (root == null)
             return 0;
-        return root.val + sum(root.left) + sum(root.right);
+        int sumL = sum(root.left);
+        int sumR = sum(root.right);
+        return root.val + sumL + sumR;
     }
 
+    public static int max(Node root) {
+        if (root == null)
+            return Integer.MIN_VALUE;
+        return Math.max(root.val, Math.max(max(root.left), max(root.right)));
+    }
+
+    public static int height(Node root) {
+        if (root == null) {
+            return 0;
+        }
+        int lHeight = height(root.left);
+        int rHeight = height(root.right);
+        return 1 + Math.max(lHeight, rHeight);
+    }
 
     public static void main(String[] args) {
         Node root = new Node(1);
@@ -50,7 +66,7 @@ public class SizeMaxSumHeight {
         a.right = d;
         Node e = new Node(6);
         b.right = e;
-        System.out.println(sum(root));
+        System.out.println(max(root));
 
     }
 
