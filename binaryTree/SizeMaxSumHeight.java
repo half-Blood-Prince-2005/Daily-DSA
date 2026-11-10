@@ -1,4 +1,4 @@
-package BST;
+package binaryTree;
 
 public class SizeMaxSumHeight {
     public static class Node {

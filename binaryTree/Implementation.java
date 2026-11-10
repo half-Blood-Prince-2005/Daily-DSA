@@ -1,4 +1,4 @@
-package BST;
+package binaryTree;
 
 public class Implementation {
     public static class Node {
@@ -26,7 +26,7 @@ public class Implementation {
         display(root.left);
         display(root.right);
     }
-    
+
 
     public static void main(String[] args) {
         Node root = new Node(2);
