@@ -38,6 +38,7 @@ public class PreInPost {
         System.out.println(root.val);
     }
 
+
     public static void main(String[] args) {
         Node root = new Node(1);
         Node a = new Node(2);
@@ -53,6 +54,6 @@ public class PreInPost {
         b.left = e;
         b.right = f;
         postOrder(root);
-        ;
+        
     }
 }
